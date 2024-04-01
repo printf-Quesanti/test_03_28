@@ -81,12 +81,13 @@ void Test5()
 	SListpushback(&s, 1);
 	SListpushback(&s, 2);
 	SListpushback(&s, 3);
-	SLT* pos = SListfind(s, 1);
+	SLT* pos = SListfind(s, 2);
 	if (pos)
 	{
-		 SListinsert(&s, pos, 40);
+		 SListeraseafter(&s, pos);
 	}
 	SListprintf(s);
+	SListdestory(&s);
  }
 int main()
 {
